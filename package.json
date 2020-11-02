@@ -1,6 +1,6 @@
 {
   "name": "@bpoehland/eslint-config-basic",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Boris Pöhland basic eslint config",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,6 @@
   "peerDependencies": {
     "eslint": ">= 7.10.0",
     "prettier": ">= 2.1.2",
-    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "@typescript-eslint/eslint-plugin": "^4.4.0"
   },

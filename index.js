@@ -4,6 +4,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
+  plugins: ['prettier'],
   extends: [
     'airbnb-base',
     'prettier',
@@ -26,12 +27,12 @@ module.exports = {
         sourceType: 'module',
         project: './tsconfig.json',
       },
-      plugins: ['@typescript-eslint'],
+      plugins: ['prettier', '@typescript-eslint'],
       extends: [
         'airbnb-typescript/base',
         'plugin:@typescript-eslint/recommended',
-        'prettier/@typescript-eslint',
         'prettier',
+        'prettier/@typescript-eslint',
         'plugin:prettier/recommended',
       ],
       rules: {
