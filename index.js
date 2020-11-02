@@ -1,58 +1,38 @@
 module.exports = {
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaFeatures: { jsx: true },
-    ecmaVersion: 2018,
+    ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'jest'],
   extends: [
-    'airbnb/hooks',
-    'plugin:jest/recommended',
+    'airbnb-base',
     'prettier',
-    'prettier/react',
     'plugin:prettier/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
   ],
-  rules: {
-    'prettier/prettier': ['error'],
-    'react/jsx-props-no-spreading': 'off',
-  },
   env: {
     browser: true,
-    es6: true,
-    jest: true,
+    es2021: true,
   },
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  settings: { react: { version: 'detect' } },
   overrides: [
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: ['**/*.ts'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-        ecmaVersion: 2018,
+        ecmaVersion: 12,
         sourceType: 'module',
         project: './tsconfig.json',
       },
-      plugins: ['react', 'jest', '@typescript-eslint'],
+      plugins: ['@typescript-eslint'],
       extends: [
-        'airbnb-typescript',
+        'airbnb-typescript/base',
         'plugin:@typescript-eslint/recommended',
         'prettier/@typescript-eslint',
-        'airbnb/hooks',
-        'plugin:jest/recommended',
         'prettier',
-        'prettier/react',
         'plugin:prettier/recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
       ],
       rules: {
         '@typescript-eslint/typedef': [
@@ -88,20 +68,16 @@ module.exports = {
             leadingUnderscore: 'allow',
           },
         ],
-        'prettier/prettier': ['error'],
-        'react/jsx-props-no-spreading': 'off',
         'no-underscore-dangle': 'off',
       },
       env: {
         browser: true,
-        es6: true,
-        jest: true,
+        es2021: true,
       },
       globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
       },
-      settings: { react: { version: 'detect' } },
     },
   ],
 };
